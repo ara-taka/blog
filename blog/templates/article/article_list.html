@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block page_title %}記事一覧{% endblock %}
+
+{% block content %}
+<p>今まで書いた日記がつまっています。</p>
+
+<ul>
+    {% for article in object_list %}
+    <li><a href = "{% url 'article:article_detail' article.pk %}">{{ article.title }}</a>|{{ article.create_date }}</li>
+    {% endfor %}
+
+    <!-- 増えたらページネーション機能を追加 -->
+
+    <!-- 検索、カテゴリ別検索 -->
+</ul>
+
+{% endblock %}

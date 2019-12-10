@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block page_title %}記事詳細{% endblock %}
+
+{% block header %}- 記事詳細{% endblock %}
+
+{% block content %}
+
+<h2>{{ article.title }}</h2>
+<p>{{ article.create_date }}</p>
+
+<p>{{ article.text }}</p>
+
+<!-- コメント -->
+
+<!-- 関連記事を載せる -->
+
+{% endblock %}

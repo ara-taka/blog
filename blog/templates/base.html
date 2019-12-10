@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery = 'slim' %}
+<html lang="ja">
+<head>
+    <meta charset = "utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>日記 - {% block page_title %}{% endblock %}</title>
+
+    {# --- css --- #}
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+<main class = "container">
+    <header>
+        <a href = "{% url 'article:index' %}">トップ</a> - 
+        <a href = "{% url 'article:article_list' %}">記事一覧</a>
+        {% block header %}{% endblock %}
+    </header>
+
+    <h1>ブログ</h1>
+
+    {% block content %}{% endblock %}
+
+    <footer>© 2019 </footer>
+</main>
+
+{# --- js --- #}
+{% block extra_js %}{% endblock %}
+</body>
+</html>
